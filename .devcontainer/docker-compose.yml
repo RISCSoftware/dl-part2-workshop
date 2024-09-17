@@ -13,14 +13,14 @@ services:
     #   - /ramdrive:size=100g
     # container_name: dl-workshop-dev
     # TODO: uncomment for GPU
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           count: all
-    #           capabilities:
-    #             - gpu
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities:
+                - gpu
     shm_size: 200G
     # TODO: Add mounts
     volumes:
