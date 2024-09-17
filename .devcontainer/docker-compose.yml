@@ -2,6 +2,7 @@ services:
   runtime:
     image: dl-workshop
     shm_size: 200G
+    command: "bash -c 'source /repo/.devcontainer/entrypoint.sh'"
     ports:
       - "8888:8888"
   dev:
