@@ -20,11 +20,6 @@ services:
     # TODO: Add mounts
     # volumes:
       # - C:/Users/riscguest/repos/challenge:/repo
-    command: >
-      bash -c "
-        mkdir -p /home/msteindl /home/jdoe &&
-        jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --notebook-dir=/home &
-        tail -f /dev/null
-      "
+    command: "bash -c 'source /repo/.devcontainer/entrypoint.sh'"
     ports:
       - "8888:8888"

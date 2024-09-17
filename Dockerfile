@@ -34,19 +34,14 @@ RUN apt-get update --allow-insecure-repositories && apt-get install -yq \
 # Install additional python packages
 RUN python3 -m pip install -U jupyter
 
-# Setup directory structure
-RUN mkdir /repo
-WORKDIR /repo
-
-# set pythonpath for nvidia image
-# ENV PYTHONPATH "${PYTHONPATH}:/repo"
-
-# Copy the rest of the repository
-# ADD . .
-
 # Set timezone
 ARG TZ=Europe/Vienna
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# Setup directory structure
+RUN mkdir /repo
+ADD . /repo
+# WORKDIR /repo
 
 # ENTRYPOINT ["tail", "-f", "/dev/null"]  # does not work with docker run -d
 CMD ["tail", "-f", "/dev/null"]
