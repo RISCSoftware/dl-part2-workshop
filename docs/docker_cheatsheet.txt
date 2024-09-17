@@ -1,0 +1,10 @@
+cd ~/repos
+git clone git@github.com:RISCSoftware/dl-part2-workshop.git
+cd dl-part2-workshop
+
+docker build -t dl-workshop .
+# docker pull huggingface/transformers-pytorch-gpu:latest
+
+docker compose -p dl-workshop -f .devcontainer/docker-compose.yml up -d --no-recreate --scale dev=1
+docker exec -it dl-workshop-runtime bash
+docker logs dl-workshop-runtime

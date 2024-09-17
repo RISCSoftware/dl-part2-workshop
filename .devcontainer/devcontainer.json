@@ -1,0 +1,33 @@
+{
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dev",
+    "workspaceFolder": "/repo",
+    "postCreateCommand": "git config --global --add safe.directory /repo",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "github.copilot-chat",
+                "github.copilot",
+                "janisdd.vscode-edit-csv",
+                "mhutchie.git-graph",
+                "ms-azuretools.vscode-docker",
+                "ms-python.debugpy",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.datawrangler",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.vscode-jupyter-cell-tags",
+                "ms-toolsai.vscode-jupyter-slideshow",
+                "njpwerner.autodocstring",
+                "rogalmic.bash-debug",
+                "tamasfe.even-better-toml"
+            ]
+        },
+        "settings": {
+            "python.defaultInterpreterPath": "/.pyenv/versions/3.11.9/bin/python3.11"
+        }
+    }
+}

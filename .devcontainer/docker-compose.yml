@@ -1,0 +1,30 @@
+services:
+  dev:
+    # TODO: specify your image here
+    # image: huggingface/transformers-pytorch-gpu:latest
+    image: dl-workshop
+    # TODO: uncomment for ramdrive
+    # tmpfs:
+    #   - /ramdrive:size=100g
+    # container_name: dl-workshop-dev
+    # TODO: uncomment for GPU
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities:
+    #             - gpu
+    shm_size: 200G
+    # TODO: Add mounts
+    # volumes:
+      # - C:/Users/riscguest/repos/challenge:/repo
+    command: >
+      bash -c "
+        mkdir -p /home/msteindl /home/jdoe &&
+        jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --notebook-dir=/home &
+        tail -f /dev/null
+      "
+    ports:
+      - "8888:8888"
