@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# Create user directories
-mkdir -p /home/msteindl /home/jdoe
+# Read the list of workshop users
+mapfile -t users < /repo/.devcontainer/users.list
 
-# Copy the repository to all user directories
-find /home -mindepth 1 -maxdepth 1 -type d | while read SUBDIR; do
-  cp -r "/repo" "$SUBDIR"
+# Create a home directory for each user
+for user in "${users[@]}"; do
+  mkdir -p "/home/$user"
+  cp -r "/repo" "/home/$user"
 done
 
 # Start Jupyter Notebook
