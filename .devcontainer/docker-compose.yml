@@ -1,8 +1,11 @@
 services:
+  runtime:
+    image: dl-workshop
+    shm_size: 200G
   dev:
     # TODO: specify your image here
     # image: huggingface/transformers-pytorch-gpu:latest
-    image: dl-workshop
+    image: dl-workshop-dev
     # TODO: uncomment for ramdrive
     # tmpfs:
     #   - /ramdrive:size=100g
@@ -18,8 +21,8 @@ services:
     #             - gpu
     shm_size: 200G
     # TODO: Add mounts
-    # volumes:
-      # - C:/Users/riscguest/repos/challenge:/repo
+    volumes:
+      - ../:/repo
     command: "bash -c 'source /repo/.devcontainer/entrypoint.sh'"
     ports:
       - "8888:8888"
