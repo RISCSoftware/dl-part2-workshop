@@ -1,5 +1,6 @@
 {
     "files.eol": "\n",
+    "peacock.color": "#469990",
     "workbench.colorCustomizations": {
         "commandCenter.border": "#e7e7e799",
         "sash.hoverBorder": "#5db5ab",
@@ -8,5 +9,5 @@
         "titleBar.inactiveBackground": "#46999099",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#469990"
+    "peacock.remoteColor": "#469990"
 }
