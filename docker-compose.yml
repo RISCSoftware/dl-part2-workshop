@@ -3,6 +3,7 @@ services:
     image: dl-workshop
     mem_limit: 16G # TODO
     shm_size: 16G # TODO
+    # command: "bash -c 'cd /repo && python3 -m workshop.qwen2_stresstest && tail -f /dev/null'"
     volumes:
       - /mnt/workshop:/host
   runtime-jupyter:

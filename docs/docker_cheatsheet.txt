@@ -5,7 +5,7 @@ cd dl-part2-workshop
 # docker pull huggingface/transformers-pytorch-gpu:latest
 
 docker build -t dl-workshop .; docker build -t dl-workshop-dev -f Dockerfile.dev .
-docker compose -p dl-workshop -f docker-compose.yml up -d --scale runtime=2 --scale runtime-jupyter=1
+docker compose -p dl-workshop -f docker-compose.yml up -d --scale runtime-jupyter=1 --scale runtime=2
 docker image prune -f
 
 docker exec -it dl-workshop-dev bash
