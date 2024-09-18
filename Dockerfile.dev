@@ -40,8 +40,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Setup directory structure
 RUN mkdir /repo
-ADD . /repo
-# WORKDIR /repo
+WORKDIR /repo
+# ADD . /repo
 
 # ENTRYPOINT ["tail", "-f", "/dev/null"]  # does not work with docker run -d
 CMD ["tail", "-f", "/dev/null"]
