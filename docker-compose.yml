@@ -1,13 +1,15 @@
 services:
   runtime:
-    image: dl-workshop
+    image: registry.risc-software.at/risc_ds/risc_dse/dl-workshop
+    # image: dl-workshop
     mem_limit: 16G # TODO
     shm_size: 16G # TODO
     # command: "bash -c 'cd /repo && python3 -m workshop.qwen2_stresstest && tail -f /dev/null'"
     volumes:
       - /mnt/workshop:/host
   runtime-jupyter:
-    image: dl-workshop
+    image: registry.risc-software.at/risc_ds/risc_dse/dl-workshop
+    # image: dl-workshop
     mem_limit: 128G # TODO
     shm_size: 128G # TODO
     command: "bash -c 'source /repo/bash/create_user_dirs.sh; source /repo/bash/jupyter_server.sh'"
