@@ -1,0 +1,22 @@
+
+[tool.ruff]
+line-length = 120
+exclude = [
+    "./package/module/",
+]
+
+[tool.isort]
+profile = "black"
+line_length = 120
+skip_glob = [
+    "package/module",
+]
+
+[tool.black]
+line-length = 120
+force-exclude = """
+(
+    package/module
+  | package/module2
+)
+"""
