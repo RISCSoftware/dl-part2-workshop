@@ -8,5 +8,10 @@ docker build -t dl-workshop .; docker build -t dl-workshop-dev -f Dockerfile.dev
 docker compose -p dl-workshop -f docker-compose.yml up -d --scale runtime-jupyter=1 --scale runtime=2
 docker image prune -f
 
+docker tag dl-workshop registry.risc-software.at/risc_ds/risc_dse/dl-workshop:latest
+docker push registry.risc-software.at/risc_ds/risc_dse/dl-workshop:latest
+docker tag dl-workshop registry.risc-software.at/risc_ds/risc_dse/dl-workshop:1.0
+docker push registry.risc-software.at/risc_ds/risc_dse/dl-workshop:1.0
+
 docker exec -it dl-workshop-dev bash
 docker logs dl-workshop-dev
