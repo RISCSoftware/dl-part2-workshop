@@ -54,8 +54,8 @@ def load_qwen2_and_generate():
 
 
 def main():
-    min_sleep_time = 5
-    max_sleep_time = 15
+    min_sleep_time = 0
+    max_sleep_time = 0
     sleep_time = random.randint(min_sleep_time, max_sleep_time)
     logger.info(f"Sleeping for {sleep_time} seconds")
     time.sleep(sleep_time)
