@@ -12,8 +12,11 @@ services:
     # image: dl-workshop
     mem_limit: 128G # TODO
     shm_size: 128G # TODO
-    command: "bash -c 'source /repo/bash/create_user_dirs.sh; source /repo/bash/jupyter_server.sh'"
+    command: >
+      bash -c "source /repo/bash/create_user_dirs.sh;
+              source /repo/bash/jupyter_server.sh"
     ports:
       - "8888:8888"
     volumes:
       - /mnt/workshop:/host
+      - ./:/repo

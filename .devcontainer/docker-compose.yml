@@ -17,6 +17,9 @@ services:
     #             - gpu
     mem_limit: 128G # TODO
     shm_size: 128G
+    command: >
+      bash -c "cd /repo &&
+              tail -f /dev/null"
     volumes:
       - ../:/repo
       - /mnt/workshop:/host

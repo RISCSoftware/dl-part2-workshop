@@ -1,4 +1,4 @@
-FROM dl-workshop:latest
+FROM registry.risc-software.at/risc_ds/risc_dse/dl-workshop:latest
 
 RUN python3 -m pip install -U black
 

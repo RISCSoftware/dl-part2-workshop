@@ -32,7 +32,7 @@ RUN apt-get update --allow-insecure-repositories && apt-get install -yq \
     && rm -rf /var/lib/apt/lists/*
 
 # Install additional python packages
-RUN python3 -m pip install -U jupyter
+RUN python3 -m pip install "jupyter==1.0.0" "notebook==7.2.2" "rise==5.7.1" "jupyterlab_rise==0.42.0" "d2l==1.0.3"
 
 # Set timezone
 ARG TZ=Europe/Vienna

@@ -29,3 +29,32 @@
   - Ctrl+Shift+P → Dev Containers: Attach to Running Container...
     - Select `dl-workshop-dev-1`
 - 
+
+
+### Install VSCode extensions
+
+- ms-vscode-remote.vscode-remote-extensionpack
+- ms-python.python
+- lextudio.restructuredtext
+- shd101wyy.markdown-preview-enhanced
+
+### TODOs
+
+- push container to docker hub
+- send rise.css to evans
+
+### Fix rise.css
+
+- Option 1:
+  ```
+  .jp-Editor .cm-content {
+      font-size: 150%;
+  }
+  ````
+
+- Option 2:
+  ```
+  .cm-editor {
+    font-size: 20px;
+  }
+  ```
