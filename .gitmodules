@@ -1,0 +1,15 @@
+[submodule "d2l-en"]
+	path = d2l-en
+	url = https://github.com/d2l-ai/d2l-en.git
+[submodule "d2l-book"]
+	path = d2l-book
+	url = https://github.com/d2l-ai/d2l-book.git
+[submodule "d2l-pytorch-slides"]
+	path = d2l-pytorch-slides
+	url = https://github.com/d2l-ai/d2l-pytorch-slides.git
+[submodule "d2l-pytorch-colab"]
+	path = d2l-pytorch-colab
+	url = https://github.com/d2l-ai/d2l-pytorch-colab.git
+[submodule "d2l-pytorch-sagemaker"]
+	path = d2l-pytorch-sagemaker
+	url = https://github.com/d2l-ai/d2l-pytorch-sagemaker.git
