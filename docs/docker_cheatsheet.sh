@@ -4,6 +4,11 @@ git clone https://github.com/RISCSoftware/dl-part2-workshop.git
 cd dl-part2-workshop
 
 docker compose -p dl-workshop -f docker-compose.yml up -d --scale runtime-jupyter=1 --scale runtime=2
+docker logs dl-workshop-runtime-jupyter-1 |& grep token
+
+http://qftquad2.risc.jku.at:8888/notebooks/msteindl/repo/session_1/part1_preliminaries.ipynb
+http://qftquad2.risc.jku.at:8888/notebooks/msteindl/repo/session_1/part2_neural_nets.ipynb
+http://qftquad2.risc.jku.at:8888/tree/msteindl/repo/session_1
 
 # login to registry
 docker login https://index.docker.io/v1/
