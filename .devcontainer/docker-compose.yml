@@ -1,7 +1,6 @@
 services:
   dev:
-    image: risclidse/dl-workshop-dev
-    # image: dl-workshop-dev
+    image: risclidse/dl-workshop:dev
     # TODO: uncomment for ramdrive
     # tmpfs:
     #   - /ramdrive:size=100G

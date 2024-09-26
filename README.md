@@ -27,7 +27,7 @@
   - Ctrl+Shift+P → Remote-SSH: Connect to Host...
     - Enter `devtermgpu02`  <!-- TODO -->
   - Ctrl+Shift+P → Dev Containers: Attach to Running Container...
-    - Select `dl-workshop-dev-1`
+    - Select `dl-workshop-runtime-<id>`
 - 
 
 

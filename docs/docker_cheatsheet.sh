@@ -1,6 +1,6 @@
 # git stuff
 cd ~/repos
-git clone git@github.com:RISCSoftware/dl-part2-workshop.git
+git clone https://github.com/RISCSoftware/dl-part2-workshop.git
 cd dl-part2-workshop
 
 docker compose -p dl-workshop -f docker-compose.yml up -d --scale runtime-jupyter=1 --scale runtime=2
@@ -25,5 +25,5 @@ docker push $image:dev
 docker pull $image
 docker pull $image-dev
 
-docker exec -it dl-workshop-dev bash
-docker logs dl-workshop-dev
+docker exec -it dl-workshop-runtime-1 bash
+docker logs dl-workshop-runtime-1
