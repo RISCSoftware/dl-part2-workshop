@@ -4,7 +4,9 @@ services:
     # image: dl-workshop
     mem_limit: 16G # TODO
     shm_size: 16G # TODO
-    # command: "bash -c 'cd /repo && python3 -m workshop.qwen2_stresstest && tail -f /dev/null'"
+    command: >
+      bash -c "cd /repo &&
+              tail -f /dev/null"
     volumes:
       - /mnt/workshop:/host
   runtime-jupyter:
@@ -13,8 +15,9 @@ services:
     mem_limit: 128G # TODO
     shm_size: 128G # TODO
     command: >
-      bash -c "source /repo/bash/create_user_dirs.sh;
-              source /repo/bash/jupyter_server.sh"
+      bash -c "source /repo/bash/create_user_dirs.sh &&
+              source /repo/bash/jupyter_server.sh &&
+              tail -f /dev/null"
     ports:
       - "8888:8888"
     volumes:
