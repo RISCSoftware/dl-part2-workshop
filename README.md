@@ -10,7 +10,8 @@ At the start of the workshop, you will receive a unique ID between 1 and 30.
 In the following instructions, `<id>` will represent your specific ID.
 You can already test your access by using any ID.
 Feel free to run code or modify files—everything will be reset before the workshop begins.
-Please note that there might be some temporary issues with VSCode.
+
+Please be aware that we are currently experiencing issues with the VSCode option.
 If you encounter an error message stating that VSCode cannot execute Docker commands, please try again later.
 
 ### Option 1: Browser
