@@ -97,6 +97,7 @@ If you see only a blank page in the Browser option, try `Ctrl+Shift+R`.
   - [0_intro.ipynb](workshop/0_intro.ipynb) - Introduction to the workshop, including initial setup and background information.
   - [1a_torch_tensors.ipynb](workshop/1a_torch_tensors.ipynb) - Tensor manipulation in PyTorch.
   - [1b_neural_nets.ipynb](workshop/1b_neural_nets.ipynb) - Basics of neural networks in PyTorch.
-  - [2_transformers_self_attention.ipynb](workshop/2_transformers.ipynb) - Introduction to transformers and self-attention mechanisms.
+  - [2_transformers_self_attention.ipynb](workshop/2_transformer_self_attention.ipynb) - Introduction to transformers and self-attention mechanisms.
   - [3_neurosymbolic_ai.ipynb](workshop/3_neurosymbolic_ai.ipynb) - Neurosymbolic AI concepts and applications.
 - [utils/](utils) - Utility scripts and helper functions.
+
