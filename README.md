@@ -1,5 +1,22 @@
 
 
+## Abstract
+
+**Advanced Machine Learning Workshop: From Theory to Practice with Neural Networks**
+
+We cordially invite you to participate in a comprehensive workshop designed to enrich your understanding of machine learning.
+We will explore the theoretical foundations and practical applications of neural networks, emphasizing the transformative technologies of transformers and attention mechanisms.
+
+Throughout this three-hour workshop, we will explore both theory and hands-on coding, using Python and Jupyter notebooks to apply learning in real-time.
+We will cover essential aspects such as neural network architecture, emphasizing initialization, regularization, optimization, backpropagation, and first-order automatic gradient differentiation.
+These concepts form the backbone of advanced machine learning practices.
+In our session on natural language processing (NLP), we will discuss and code the attention mechanism and transformer architectures, combining theoretical insights with practical coding exercises.
+The workshop will also include discussions and examples on select papers in the field of neurosymbolic AI, exploring current trends and innovative methodologies.
+
+Please bring your laptop to fully participate, as each session integrates coding activities where we implement and train key components of neural networks using PyTorch.
+Detailed instructions for preparing your laptop, including necessary installations and configurations, will be provided soon.
+We give our best to offer a workshop that will enhance your understanding of neural networks and provide practical experience with advanced machine learning techniques for tackling complex challenges.
+
 ## Participate in Live-Coding
 
 Welcome to the workshop!
@@ -14,11 +31,13 @@ Feel free to run code or modify files—everything will be reset before the work
 Please be aware that we are currently experiencing issues with the VSCode option.
 If you encounter an error message stating that VSCode cannot execute Docker commands, please try again later.
 
+If you see only a blank page in the Browser option, try `Ctrl+Shift+R`.
+
 ### Option 1: Browser
 
 - Open this link in your browser:  
   http://qftquad2.risc.jku.at:8888/tree?token=224c2703181e050254b5
-- Navigate to \<id\> → workshop → 1a_torch_tensors.ipynb
+- Navigate to \<id\> → repo → workshop → 1a_torch_tensors.ipynb
 
 ### Option 2: VSCode
 
