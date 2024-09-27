@@ -87,14 +87,16 @@ If you see only a blank page in the Browser option, try `Ctrl+Shift+R`.
   - File → New File... → Jupyter Notebook
   - Ctrl+Shift+P → Notebook: Select Notebook Kernel → Existing Jupyter Server → http://qftquad2.risc.jku.at:8888 -->
 
-## Repo file structure
+## File structure
 
 - [d2l-en/](d2l-en) - Directory containing the English version of the "Dive into Deep Learning" (D2L) resources.
 - [d2l-pytorch-colab/](d2l-pytorch-colab) - Colab notebooks for D2L with PyTorch, ready to be used in Colab environments.
 - [d2l-pytorch-slides/](d2l-pytorch-slides) - Slide decks for presentations based on D2L content using PyTorch.
 - [images/](images) - A folder containing images used throughout the workshop materials and notebooks.
 - [workshop/](workshop) - Main directory for workshop-related materials.
-  - [workshop/0_intro.ipynb](workshop/0_intro.ipynb) - Introduction to the workshop, including initial setup and background information.
-  - [workshop/1a_torch_tensors.ipynb](workshop/1a_torch_tensors.ipynb) - Notebook focused on introducing PyTorch tensors.
-  - [workshop/1b_neural_nets.ipynb](workshop/1b_neural_nets.ipynb) - Notebook covering the basics of neural networks in PyTorch.
+  - [0_intro.ipynb](workshop/0_intro.ipynb) - Introduction to the workshop, including initial setup and background information.
+  - [1a_torch_tensors.ipynb](workshop/1a_torch_tensors.ipynb) - Tensor manipulation in PyTorch.
+  - [1b_neural_nets.ipynb](workshop/1b_neural_nets.ipynb) - Basics of neural networks in PyTorch.
+  - [2_transformers_self_attention.ipynb](workshop/2_transformers.ipynb) - Introduction to transformers and self-attention mechanisms.
+  - [3_neurosymbolic_ai.ipynb](workshop/3_neurosymbolic_ai.ipynb) - Neurosymbolic AI concepts and applications.
 - [utils/](utils) - Utility scripts and helper functions.
