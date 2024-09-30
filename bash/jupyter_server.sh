@@ -7,7 +7,7 @@
 #     -subj "/C=US/ST=State/L=City/O=Organization/OU=Department/CN=localhost"
 # fi
 
-TOKEN="deadbeef"
+TOKEN="224c2703181e050254b5"
 
 # Start Jupyter Notebook
 jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/home  --IdentityProvider.token=$TOKEN &
