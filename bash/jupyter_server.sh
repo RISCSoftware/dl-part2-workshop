@@ -11,6 +11,7 @@ TOKEN="deadbeef"
 
 # Start Jupyter Notebook
 jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/home  --IdentityProvider.token=$TOKEN &
+# jupyter notebook --ip=0.0.0.0 --port=8887 --no-browser --allow-root --notebook-dir=/repo  --IdentityProvider.token=$TOKEN &
 
 # Start Jupyter Notebook without token
 # jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --notebook-dir=/home &

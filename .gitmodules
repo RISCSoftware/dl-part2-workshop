@@ -7,3 +7,6 @@
 [submodule "d2l-pytorch-colab"]
 	path = d2l-pytorch-colab
 	url = https://github.com/d2l-ai/d2l-pytorch-colab.git
+[submodule "nma_rl_games"]
+	path = nma_rl_games
+	url = https://github.com/raymondchua/nma_rl_games.git
