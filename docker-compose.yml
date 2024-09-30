@@ -23,4 +23,16 @@ services:
       - "8888:8888"
     volumes:
       - /mnt/workshop:/host
-      # - ./:/repo
+      - ./:/repo
+  runtime-presenter:
+    image: risclidse/dl-workshop
+    # image: dl-workshop
+    mem_limit: 128G # TODO
+    shm_size: 128G # TODO
+    command: >
+      bash -c "tail -f /dev/null"
+    ports:
+      - "8887:8887"
+    volumes:
+      - /mnt/workshop:/host
+      - ./:/repo
