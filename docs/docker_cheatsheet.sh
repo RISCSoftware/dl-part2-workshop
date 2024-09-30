@@ -8,6 +8,10 @@ docker compose -p dl-workshop -f docker-compose.yml up -d --scale runtime-jupyte
 docker exec -it dl-workshop-runtime-jupyter-1 bash
 docker logs dl-workshop-runtime-jupyter-1 |& grep token
 
+# Presenter
+docker exec -it dl-workshop-runtime-presenter-1 bash
+jupyter notebook --ip=0.0.0.0 --port=8887 --no-browser --allow-root --notebook-dir=/repo  --IdentityProvider.token='deadbeef'
+
 http://qftquad2.risc.jku.at:8888/tree
 http://qftquad2.risc.jku.at:8888/tree/msteindl/repo/session_1
 http://qftquad2.risc.jku.at:8888/notebooks/msteindl/repo/session_1/part1_preliminaries.ipynb
