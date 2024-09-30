@@ -10,6 +10,3 @@
 [submodule "nma_rl_games"]
 	path = nma_rl_games
 	url = https://github.com/raymondchua/nma_rl_games.git
-[submodule "course-content-dl"]
-	path = course-content-dl
-	url = https://github.com/NeuromatchAcademy/course-content-dl.git
