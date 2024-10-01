@@ -1,4 +1,3 @@
-# Imports
 import os
 import math
 import random
@@ -16,7 +15,8 @@ import torch.nn.functional as F
 from tqdm.notebook import tqdm
 
 import sys
-sys.path.append('./nma_rl_games/alpha-zero')
+
+sys.path.append("../nma_rl_games/alpha-zero")
 
 import Arena
 
@@ -30,34 +30,6 @@ from othello.OthelloLogic import Board
 
 # from othello.OthelloGame import OthelloGame
 from othello.pytorch.NNet import NNetWrapper as NNet
-
-
-args = dotdict({
-    'numIters': 1,  # In training, number of iterations = 1000 and num of episodes = 100
-    'numEps': 1,  # Number of complete self-play games to simulate during a new iteration.
-    'tempThreshold': 15,  # To control exploration and exploitation
-    'updateThreshold': 0.6,  # During arena playoff, new neural net will be accepted if threshold or more of games are won.
-    'maxlenOfQueue': 200,  # Number of game examples to train the neural networks.
-    'numMCTSSims': 15,  # Number of games moves for MCTS to simulate.
-    'arenaCompare': 10,  # Number of games to play during arena play to determine if new net will be accepted.
-    'cpuct': 1,
-    'maxDepth':5,  # Maximum number of rollouts
-    'numMCsims': 5,  # Number of monte carlo simulations
-    'mc_topk': 3,  # Top k actions for monte carlo rollout
-
-    'checkpoint': './temp/',
-    'load_model': False,
-    'load_folder_file': ('/dev/models/8x100x50','best.pth.tar'),
-    'numItersForTrainExamplesHistory': 20,
-
-    # Define neural network arguments
-    'lr': 0.001,  # learning rate
-    'dropout': 0.3,
-    'epochs': 10,
-    'batch_size': 64,
-    'device': 'cpu',
-    'num_channels': 512,
-})
 
 
 def set_seed(seed=None, seed_torch=True):
@@ -135,6 +107,34 @@ def set_device():
         print("GPU is enabled in this notebook.")
 
     return device
+
+
+args = dotdict(
+    {
+        "numIters": 1,  # In training, number of iterations = 1000 and num of episodes = 100
+        "numEps": 1,  # Number of complete self-play games to simulate during a new iteration.
+        "tempThreshold": 15,  # To control exploration and exploitation
+        "updateThreshold": 0.6,  # During arena playoff, new neural net will be accepted if threshold or more of games are won.
+        "maxlenOfQueue": 200,  # Number of game examples to train the neural networks.
+        "numMCTSSims": 15,  # Number of games moves for MCTS to simulate.
+        "arenaCompare": 10,  # Number of games to play during arena play to determine if new net will be accepted.
+        "cpuct": 1,
+        "maxDepth": 5,  # Maximum number of rollouts
+        "numMCsims": 5,  # Number of monte carlo simulations
+        "mc_topk": 3,  # Top k actions for monte carlo rollout
+        "checkpoint": "./temp/",
+        "load_model": False,
+        "load_folder_file": ("/dev/models/8x100x50", "best.pth.tar"),
+        "numItersForTrainExamplesHistory": 20,
+        # Define neural network arguments
+        "lr": 0.001,  # learning rate
+        "dropout": 0.3,
+        "epochs": 10,
+        "batch_size": 64,
+        "device": set_device(),
+        "num_channels": 512,
+    }
+)
 
 
 def loadTrainExamples(folder, filename):
