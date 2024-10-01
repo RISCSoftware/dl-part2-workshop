@@ -1,16 +1,17 @@
 services:
-  runtime:
+  presenter:
     image: risclidse/dl-workshop
     # image: dl-workshop
-    mem_limit: 16G # TODO
-    shm_size: 16G # TODO
+    mem_limit: 128G # TODO
+    shm_size: 128G # TODO
     command: >
-      bash -c "cd /repo &&
-              tail -f /dev/null"
+      bash -c "tail -f /dev/null"
+    ports:
+      - "8887:8887"
     volumes:
       - /mnt/workshop:/host
-      # - ./:/repo
-  runtime-jupyter:
+      - ./:/repo
+  participant:
     image: risclidse/dl-workshop
     # image: dl-workshop
     mem_limit: 128G # TODO
@@ -23,16 +24,15 @@ services:
       - "8888:8888"
     volumes:
       - /mnt/workshop:/host
-      - ./:/repo
-  runtime-presenter:
-    image: risclidse/dl-workshop
-    # image: dl-workshop
-    mem_limit: 128G # TODO
-    shm_size: 128G # TODO
-    command: >
-      bash -c "tail -f /dev/null"
-    ports:
-      - "8887:8887"
-    volumes:
-      - /mnt/workshop:/host
-      - ./:/repo
+      # - ./:/repo
+  # participant-vscode:
+  #   image: risclidse/dl-workshop
+  #   # image: dl-workshop
+  #   mem_limit: 16G # TODO
+  #   shm_size: 16G # TODO
+  #   command: >
+  #     bash -c "cd /repo &&
+  #             tail -f /dev/null"
+  #   volumes:
+  #     - /mnt/workshop:/host
+  #     # - ./:/repo
