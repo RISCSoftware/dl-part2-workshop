@@ -10,7 +10,7 @@ services:
       - "8887:8887"
     volumes:
       - /mnt/workshop:/host
-      - ./:/repo
+      # - ./:/repo
   participant:
     image: risclidse/dl-workshop
     # image: dl-workshop

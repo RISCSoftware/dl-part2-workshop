@@ -17,6 +17,33 @@ Please bring your laptop to fully participate, as each session integrates coding
 Detailed instructions for preparing your laptop, including necessary installations and configurations, will be provided soon.
 We give our best to offer a workshop that will enhance your understanding of neural networks and provide practical experience with advanced machine learning techniques for tackling complex challenges.
 
+## How to run the workshop code?
+
+<!-- ### Clone the repo and its submodules
+
+```
+git clone https://github.com/RISCSoftware/dl-part2-workshop
+git submodule update --init --recursive
+``` -->
+
+### Option 1: Run a docker container
+
+- Install docker
+- Start our docker container
+  ```
+  docker run -p 8888:8888 risclidse/dl-workshop bash -c "jupyter notebook --NotebookApp.ip=0.0.0.0 --NotebookApp.port=8888 --NotebookApp.allow_root=True --NotebookApp.notebook_dir=/repo --NotebookApp.token=''"
+  ```
+- Enter the provided URL in the browser, e.g. http://127.0.0.1:8888/tree
+
+### Option 2: Run the notebooks on Google Colab
+
+- Download the `.ipynb` files of our workshop
+- Go to https://colab.research.google.com/
+- Select File → Open notebook → Upload
+- Note:
+  - You might be asked to restart the session once after the `pip3 install` completed
+  - Most images will not be shown on Colab
+
 ## Participate in Live-Coding
 
 Welcome to the workshop!
@@ -61,10 +88,6 @@ If you see only a blank page in the Browser option, try `Ctrl+Shift+R`.
       `ms-python.python`
     - Jupyter  
       `ms-toolsai.jupyter`
-    <!-- - Foo  
-      (`lextudio.restructuredtext`)
-    - Foo  
-      (`shd101wyy.markdown-preview-enhanced`) -->
 - Connect via SSH
   - Ctrl+Shift+P → Remote-SSH: Connect to Host...
     - Enter `<user>@qftquad2.risc.jku.at`  
