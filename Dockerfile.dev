@@ -1,6 +1,0 @@
-FROM risclidse/dl-workshop:latest
-
-RUN python3 -m pip install -U black
-
-# ENTRYPOINT ["tail", "-f", "/dev/null"]  # does not work with docker run -d
-CMD ["tail", "-f", "/dev/null"]
