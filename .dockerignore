@@ -1,0 +1,14 @@
+__pycache__/
+.devcontainer/
+.dockerignore
+# .env
+.git/
+.gitignore
+.gitmodules
+.vscode/
+*.ipynb_checkpoints/
+*.pyc
+*.tmp
+docker-compose.yml
+Dockerfile
+lightning_logs/

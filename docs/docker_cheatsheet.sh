@@ -17,7 +17,7 @@ docker login https://index.docker.io/v1/
 
 # image=registry.risc-software.at/risc_ds/risc_dse/dl-workshop
 image=risclidse/dl-workshop
-version=1.3
+version=1.5
 
 docker build -t $image:$version .
 docker tag $image:$version $image:latest
