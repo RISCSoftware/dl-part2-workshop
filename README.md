@@ -124,3 +124,13 @@ If you see only a blank page in the Browser option, try `Ctrl+Shift+R`.
   - [3_neurosymbolic_ai.ipynb](workshop/3_neurosymbolic_ai.ipynb) - Neurosymbolic AI concepts and applications.
 - [utils/](utils) - Utility scripts and helper functions.
 
+## Attribution and Licence
+
+This project uses content from the following sources:
+
+- [Dive into Deep Learning (d2l)](https://github.com/d2l-ai/d2l-en) - Licensed under CC BY-SA 4.0. See the [LICENSE](https://github.com/d2l-ai/d2l-en/blob/master/LICENSE).
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) by [Jay Alammar](https://jalammar.github.io/), licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+- [Neuromatch Academy Course Content](https://github.com/NeuromatchAcademy/course-content-dl) - Licensed under CC BY-4.0 and BSD-3-Clause.
+- [Understanding Deep Learning (udlbook)](https://github.com/udlbook/udlbook) - Licensed under CC BY-NC-ND 4.0. See the [LICENSE](https://github.com/udlbook/udlbook/blob/main/LICENSE).
+
+Please refer to the links for specific license details.
