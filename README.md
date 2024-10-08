@@ -132,5 +132,6 @@ This project uses content from the following sources:
 - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) by [Jay Alammar](https://jalammar.github.io/), licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 - [Neuromatch Academy Course Content](https://github.com/NeuromatchAcademy/course-content-dl) - Licensed under CC BY-4.0 and BSD-3-Clause.
 - [Understanding Deep Learning (udlbook)](https://github.com/udlbook/udlbook) - Licensed under CC BY-NC-ND 4.0. See the [LICENSE](https://github.com/udlbook/udlbook/blob/main/LICENSE).
+- [A Survey of Planning and Learning in Games](https://www.researchgate.net/publication/342579276_A_Survey_of_Planning_and_Learning_in_Games)
 
 Please refer to the links for specific license details.

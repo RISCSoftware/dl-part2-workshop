@@ -1,0 +1,4 @@
+next-token-prediction.png;https://www.nature.com/articles/s41586-023-06647-8
+transformer-architecture.png;https://arxiv.org/abs/1706.03762
+MCTS_steps.png;https://www.mdpi.com/2076-3417/10/13/4529
+next_token_tree.png;created_by_riscsw
