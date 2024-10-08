@@ -33,12 +33,17 @@ RUN apt-get update --allow-insecure-repositories && apt-get install -yq \
 
 # Install additional python packages
 RUN python3 -m pip install \
+    # Required for this workshop
     "jupyter==1.0.0" \
     "notebook==7.2.2" \
     "rise==5.7.1" \
     "jupyterlab_rise==0.42.0" \
     "d2l==1.0.3" \
-    black
+    # Not required for this workshop, but for the preceding workshop
+    "ipympl==0.9.3" \
+    "opencv-python==4.9.0.80" \
+    # Developer tools (not required for this workshop)
+    "black"
 
 # Set timezone
 ARG TZ=Europe/Vienna
@@ -47,7 +52,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # Setup directory structure
 RUN mkdir /repo
 WORKDIR /repo
-ADD . /repo
+COPY . /repo
 
 # ENTRYPOINT ["tail", "-f", "/dev/null"]  # does not work with docker run -d
 CMD ["tail", "-f", "/dev/null"]
