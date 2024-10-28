@@ -1,11 +1,12 @@
 services:
   dev:
     image: risclidse/dl-workshop
-    # TODO: uncomment for ramdrive
+    # TODO: Enter your username or set the shell variable in .bashrc
+    container_name: dl-workshop-$SHORTUSER-devcontainer
+    # Uncomment for ramdrive
     # tmpfs:
     #   - /ramdrive:size=100G
-    # container_name: dl-workshop-dev-1
-    # TODO: uncomment for GPU
+    # Uncomment for GPU
     # deploy:
     #   resources:
     #     reservations:

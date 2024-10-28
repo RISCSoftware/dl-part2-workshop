@@ -54,7 +54,7 @@ RUN mkdir /repo
 WORKDIR /repo
 COPY . /repo
 
-# Clone the repository, setup directory structure, copy required files, and clean up in one stage
+# Add selected files from the first workshop
 RUN git clone https://github.com/risc-mi/dl-cv-workshop.git /tmp/dl-cv-workshop && \
     mkdir -p /repo/workshop_2 && \
     cp /tmp/dl-cv-workshop/README.md /repo/workshop_2 && \
