@@ -54,5 +54,18 @@ RUN mkdir /repo
 WORKDIR /repo
 COPY . /repo
 
+# Clone the repository, setup directory structure, copy required files, and clean up in one stage
+RUN git clone https://github.com/risc-mi/dl-cv-workshop.git /tmp/dl-cv-workshop && \
+    mkdir -p /repo/workshop_2 && \
+    cp /tmp/dl-cv-workshop/README.md /repo/workshop_2 && \
+    cp /tmp/dl-cv-workshop/CMIYC.ipynb /repo/workshop_2 && \
+    cp /tmp/dl-cv-workshop/MNIST-complete.ipynb /repo/workshop_2 && \
+    cp /tmp/dl-cv-workshop/MNIST.ipynb /repo/workshop_2 && \
+    cp /tmp/dl-cv-workshop/Introduction.pdf /repo/workshop_2 && \
+    cp -r /tmp/dl-cv-workshop/pics /repo/workshop_2 && \
+    cp -r /tmp/dl-cv-workshop/mnist /repo/workshop_2 && \
+    cp -r /tmp/dl-cv-workshop/cmiyc /repo/workshop_2 && \
+    rm -rf /tmp/dl-cv-workshop
+
 # ENTRYPOINT ["tail", "-f", "/dev/null"]  # does not work with docker run -d
 CMD ["tail", "-f", "/dev/null"]
