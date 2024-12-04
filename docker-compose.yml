@@ -5,20 +5,22 @@ services:
     mem_limit: 128G # TODO
     shm_size: 128G # TODO
     command: >
-      bash -c "tail -f /dev/null"
+      bash -c "source /repo/bash/create_presenter_dirs.sh &&
+              source /repo/bash/jupyter_server_presenter.sh &&
+              tail -f /dev/null"
     ports:
       - "8887:8887"
     volumes:
       - /mnt/workshop:/host
-      # - ./:/repo
+      - ./:/repo
   participant:
     image: risclidse/dl-workshop
     # image: dl-workshop
     mem_limit: 128G # TODO
     shm_size: 128G # TODO
     command: >
-      bash -c "source /repo/bash/create_user_dirs.sh &&
-              source /repo/bash/jupyter_server.sh &&
+      bash -c "source /repo/bash/create_participant_dirs.sh &&
+              source /repo/bash/jupyter_server_participant.sh &&
               tail -f /dev/null"
     ports:
       - "8888:8888"

@@ -17,12 +17,12 @@ docker login https://index.docker.io/v1/
 
 # image=registry.risc-software.at/risc_ds/risc_dse/dl-workshop
 image=risclidse/dl-workshop
-version=1.7
+tag=1.9
 
-docker build -t $image:$version .
-docker tag $image:$version $image:latest
+docker build -t $image:$tag .
+docker tag $image:$tag $image:latest
 
-docker push $image:$version
+docker push $image:$tag
 docker push $image:latest
 
 docker pull $image
